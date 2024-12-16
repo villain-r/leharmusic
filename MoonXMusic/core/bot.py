@@ -6,7 +6,7 @@ import config
 from ..logging import LOGGER
 
 
-class Moon(Client):
+class Moony(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot...")
         super().__init__(
