@@ -1,7 +1,7 @@
-from AnonXMusic.core.bot import Anony
-from AnonXMusic.core.dir import dirr
-from AnonXMusic.core.userbot import Userbot
-from AnonXMusic.misc import dbb, heroku
+from MoonXMusic.core.bot import Moony
+from MoonXMusic.core.dir import dirr
+from MoonXMusic.core.userbot import Userbot
+from MoonXMusic.misc import dbb, heroku
 
 from .logging import LOGGER
 
@@ -9,7 +9,7 @@ dirr()
 dbb()
 heroku()
 
-app = Anony()
+app = Moony()
 userbot = Userbot()
 
 
