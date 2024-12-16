@@ -11,7 +11,7 @@ from MoonXMusic.misc import db
 from MoonXMusic.utils.database import add_active_video_chat, is_active_chat
 from MoonXMusic.utils.exceptions import AssistantErr
 from MoonXMusic.utils.inline import aq_markup, close_markup, stream_markup
-from MoonXMusic.utils.pastebin import MoonBin
+from MoonXMusic.utils.pastebin import MoonyBin
 from MoonXMusic.utils.stream.queue import put_queue, put_queue_index
 from MoonXMusic.utils.thumbnails import get_thumb
 
