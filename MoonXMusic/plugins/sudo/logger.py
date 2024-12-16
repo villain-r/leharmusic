@@ -1,12 +1,12 @@
 from pyrogram import filters
 
-from AnonXMusic import app
-from AnonXMusic.misc import SUDOERS
-from AnonXMusic.utils.database import add_off, add_on
-from AnonXMusic.utils.decorators.language import language
+from MoonXMusic import app
+from MoonXMusic.misc import SUDOERS
+from MoonXMusic.utils.database import add_off, add_on
+from MoonXMusic.utils.decorators.language import language
 
 
-@app.on_message(filters.command(["logger"]) & SUDOERS)
+@app.on_message(filters.command(["moon"]) & SUDOERS)
 @language
 async def logger(client, message, _):
     usage = _["log_1"]
