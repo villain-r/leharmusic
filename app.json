@@ -24,22 +24,22 @@
       },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
-        "value": "",
+        "value": "5412652292:AAFdXyamZ0VuXvA95tKhkc5qcPEqufA_XiA",
         "required": true
       },
       "MONGO_DB_URI": {
         "description": "Get a mongodb url from https://cloud.mongodb.com.",
-        "value": "",
+        "value": "mongodb+srv://harryashutosh729:harryashutosh729@harry2.xykka.mongodb.net/?retryWrites=true&w=majority&appName=harry2",
         "required": true
       },
       "OWNER_ID": {
         "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "8128368055",
+        "value": "8170572505",
         "required": true
       },
       "STRING_SESSION": {
         "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
-        "value": "",
+        "value": "BQF8IMgAYlTfhR7_8yreWga0UYibIpAzvEU_Btzi-qwOyK9Jbl2mMfBBP28eOdkS7c5vSCx0iqjTl7v5ngyn4-7FQJvIKPEaB3oOa6voml2TGRLcmR30jYUi3xzdDpkZYpoB3fv71_nDYUs_hEX2AnsGEu-xq5e2nI3gJAeINGpdGMSaYAuwCJSexgOFfwdKnuShPB1Z_3PwxeRF3NRJyLxtlpBaAf2nQd7nAFMmm6iAainj3kaeaWCpdN06dejNi7sc0rqjGNGc2rxLJME4g-f2HRQMPR5rXo4JJTd81shdAKmQRkGY_3w30DgDBBJmBNAyjFKUJJFEBH-TmCsBdVat-wwbiQAAAAFHTsm2AA",
         "required": true
       },
       "HEROKU_API_KEY": {
@@ -54,7 +54,7 @@
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "-1001836790644",
+        "value": "-1002276615267",
         "required": true
       }
     },
