@@ -64,7 +64,7 @@ async def get_thumb(videoid: str):
                     await f.write(await resp.read())
                     await f.close()
 
-        icons = Image.open("AnonXMusic/assets/icons.png")
+        icons = Image.open("MoonXMusic/assets/icons.png")
         youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
@@ -85,9 +85,9 @@ async def get_thumb(videoid: str):
         background.paste(logo, (100, 150))
 
         draw = ImageDraw.Draw(background)
-        arial = ImageFont.truetype("AnonXMusic/assets/font2.ttf", 30)
-        font = ImageFont.truetype("AnonXMusic/assets/font.ttf", 30)
-        tfont = ImageFont.truetype("AnonXMusic/assets/font3.ttf", 45)
+        arial = ImageFont.truetype("MoonXMusic/assets/font2.ttf", 30)
+        font = ImageFont.truetype("MoonXMusic/assets/font.ttf", 30)
+        tfont = ImageFont.truetype("MoonXMusic/assets/font3.ttf", 45)
 
         stitle = truncate(title)
         draw.text(
