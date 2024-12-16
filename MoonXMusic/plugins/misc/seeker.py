@@ -1,7 +1,7 @@
 import asyncio
 
-from AnonXMusic.misc import db
-from AnonXMusic.utils.database import get_active_chats, is_music_playing
+from MoonXMusic.misc import db
+from MoonXMusic.utils.database import get_active_chats, is_music_playing
 
 
 async def timer():
