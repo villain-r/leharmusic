@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from AnonXMusic import app
-from AnonXMusic.core.call import Anony
-from AnonXMusic.utils.database import get_assistant
+from MoonXMusic import app
+from MoonXMusic.core.call import Moony
+from MoonXMusic.utils.database import get_assistant
 
 welcome = 20
 close = 30
