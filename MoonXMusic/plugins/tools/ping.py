@@ -3,11 +3,11 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message
 
-from AnonXMusic import app
-from AnonXMusic.core.call import Anony
-from AnonXMusic.utils import bot_sys_stats
-from AnonXMusic.utils.decorators.language import language
-from AnonXMusic.utils.inline import supp_markup
+from MoonXMusic import app
+from MoonXMusic.core.call import Moony
+from MoonXMusic.utils import bot_sys_stats
+from MoonXMusic.utils.decorators.language import language
+from MoonXMusic.utils.inline import supp_markup
 from config import BANNED_USERS, PING_IMG_URL
 
 
@@ -19,7 +19,7 @@ async def ping_com(client, message: Message, _):
         photo=PING_IMG_URL,
         caption=_["ping_1"].format(app.mention),
     )
-    pytgping = await Anony.ping()
+    pytgping = await Moony.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(
