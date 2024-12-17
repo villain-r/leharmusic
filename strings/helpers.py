@@ -164,7 +164,7 @@ HELP_16 = """
 """
 
 HELP_17 = """
-<b><u>Owners :</b></u>
+<b><u>ᴏᴡɴᴇʀ :</b></u>
 
 /leaveall1 - for assis 1
 /leaveall2 - for assis 2
