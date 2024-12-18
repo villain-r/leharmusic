@@ -24,7 +24,7 @@
       },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
-        "value": "5412652292:AAFdXyamZ0VuXvA95tKhkc5qcPEqufA_XiA",
+        "value": "",
         "required": true
       },
       "MONGO_DB_URI": {
@@ -34,12 +34,12 @@
       },
       "OWNER_ID": {
         "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "8170572505",
+        "value": "",
         "required": true
       },
       "STRING_SESSION": {
         "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
-        "value": "BQF8IMgAYlTfhR7_8yreWga0UYibIpAzvEU_Btzi-qwOyK9Jbl2mMfBBP28eOdkS7c5vSCx0iqjTl7v5ngyn4-7FQJvIKPEaB3oOa6voml2TGRLcmR30jYUi3xzdDpkZYpoB3fv71_nDYUs_hEX2AnsGEu-xq5e2nI3gJAeINGpdGMSaYAuwCJSexgOFfwdKnuShPB1Z_3PwxeRF3NRJyLxtlpBaAf2nQd7nAFMmm6iAainj3kaeaWCpdN06dejNi7sc0rqjGNGc2rxLJME4g-f2HRQMPR5rXo4JJTd81shdAKmQRkGY_3w30DgDBBJmBNAyjFKUJJFEBH-TmCsBdVat-wwbiQAAAAFHTsm2AA",
+        "value": "",
         "required": true
       },
       "HEROKU_API_KEY": {
@@ -54,7 +54,7 @@
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "-1002276615267",
+        "value": "",
         "required": true
       }
     },
