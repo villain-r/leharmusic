@@ -11,7 +11,7 @@ from MoonXMusic.utils.decorators.language import language
 
 def testspeed(m, _):
     try:
-        test = speedtest.Speedtest()
+        test = speedtest.speedtest()
         test.get_best_server()
         m = m.edit_text(_["server_12"])
         test.download()
