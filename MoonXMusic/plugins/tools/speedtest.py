@@ -4,9 +4,9 @@ import speedtest
 from pyrogram import filters
 from pyrogram.types import Message
 
-from MOON import app
-from MOON.misc import SUDOERS
-from MOON.utils.decorators.language import language
+from MoonXMusic import app
+from MoonXMusic.misc import SUDOERS
+from MoonXMusic.utils.decorators.language import language
 
 
 def testspeed(m, _):
