@@ -30,31 +30,16 @@ def testspeed(m, _):
 async def speedtest_function(client, message: Message, _):
     m = await message.reply_text(_["server_11"])
     loop = asyncio.get_event_loop()
-
-    try:
-        # Run the speed test in an executor
-        result = await loop.run_in_executor(None, testspeed, m, _)
-        
-        # Validate the result structure
-        if not isinstance(result, dict) or "client" not in result or "server" not in result:
-            raise ValueError("Invalid result format from testspeed")
-
-        # Prepare the output message
-        output = _["server_15"].format(
-            result["client"]["isp"],
-            result["client"]["country"],
-            result["server"]["name"],
-            result["server"]["country"],
-            result["server"]["cc"],
-            result["server"]["sponsor"],
-            result["server"]["latency"],
-            result["ping"],
-        )
-        # Send the result photo with the output message
-        msg = await message.reply_photo(photo=result["share"], caption=output)
-    except Exception as e:
-        # Handle errors gracefully
-        await message.reply_text(f"Error: {str(e)}")
-    finally:
-        # Clean up the temporary message
-        await m.delete()
+    result = await loop.run_in_executor(None, testspeed, m, _)
+    output = _["server_15"].format(
+        result["client"]["isp"],
+        result["client"]["country"],
+        result["server"]["name"],
+        result["server"]["country"],
+        result["server"]["cc"],
+        result["server"]["sponsor"],
+        result["server"]["latency"],
+        result["ping"],
+    )
+    msg = await message.reply_photo(photo=result["share"], caption=output)
+    await m.delete()
