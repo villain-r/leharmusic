@@ -1,6 +1,6 @@
 from strings import get_string
 from MoonXMusic.misc import SUDOERS
-from MoonXMusic.utils.database import get_lang
+from MoonXMusic.utils.database import get_lang, is_maintenance
 
 
 def language(mystic):
