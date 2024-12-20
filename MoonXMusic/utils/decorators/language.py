@@ -1,5 +1,5 @@
-from MOON.misc import SUDOERS
-from MOON.utils.database import get_lang, is_maintenance
+from MoonXMusic.misc import SUDOERS
+from MoonXMusic.utils.database import get_lang, is_maintenance
 from strings import get_string
 
 
