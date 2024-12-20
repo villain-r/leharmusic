@@ -1,6 +1,7 @@
 from MoonXMusic.misc import SUDOERS
 from MoonXMusic.utils.database import get_lang, is_maintenance
 from strings import get_string
+from pyrogram.types import Message
 
 
 def language(mystic):
