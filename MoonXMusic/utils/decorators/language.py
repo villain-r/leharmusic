@@ -1,56 +1,50 @@
-from MoonXMusic.misc import SUDOERS
-from MoonXMusic.utils.database import get_lang, is_maintenance
-from strings import get_string
+import asyncio
+import speedtest
+from pyrogram import filters
+from strings import get_command
+from MoonXMusic import app
+from MoonxMusic.misc import SUDOERS
+
+# Commands
+SPEEDTEST_COMMAND = get_command("SPEEDTEST_COMMAND")
 
 
-def language(mystic):
-    async def wrapper(_, message, **kwargs):
-        if await is_maintenance() is False:
-            if message.from_user.id not in SUDOERS:
-                return await message.reply_text(
-                    text=f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ <a href={SUPPORT_GROUP}>sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ</a> ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
-                    disable_web_page_preview=True,
-                )
-        try:
-            await message.delete()
-        except:
-            pass
-
-        try:
-            language = await get_lang(message.chat.id)
-            language = get_string(language)
-        except:
-            language = get_string("en")
-        return await mystic(_, message, language)
-
-    return wrapper
+def testspeed(m):
+    try:
+        test = speedtest.Speedtest()
+        test.get_best_server()
+        m = m.edit("Running Download SpeedTest")
+        test.download()
+        m = m.edit("Running Upload SpeedTest")
+        test.upload()
+        test.results.share()
+        result = test.results.dict()
+        m = m.edit("Sharing SpeedTest Results")
+    except Exception as e:
+        return m.edit(e)
+    return result
 
 
-def languageCB(mystic):
-    async def wrapper(_, CallbackQuery, **kwargs):
-        if await is_maintenance() is False:
-            if CallbackQuery.from_user.id not in SUDOERS:
-                return await CallbackQuery.answer(
-                    f"{app.mention} ɪs ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ, ᴠɪsɪᴛ sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ ғᴏʀ ᴋɴᴏᴡɪɴɢ ᴛʜᴇ ʀᴇᴀsᴏɴ.",
-                    show_alert=True,
-                )
-        try:
-            language = await get_lang(CallbackQuery.message.chat.id)
-            language = get_string(language)
-        except:
-            language = get_string("en")
-        return await mystic(_, CallbackQuery, language)
-
-    return wrapper
-
-
-def LanguageStart(mystic):
-    async def wrapper(_, message, **kwargs):
-        try:
-            language = await get_lang(message.chat.id)
-            language = get_string(language)
-        except:
-            language = get_string("en")
-        return await mystic(_, message, language)
-
-    return wrapper
+@app.on_message(filters.command(SPEEDTEST_COMMAND) & SUDOERS)
+async def speedtest_function(client, message):
+    m = await message.reply_text("Running Speed test")
+    loop = asyncio.get_event_loop()
+    result = await loop.run_in_executor(None, testspeed, m)
+    output = f"""**Speedtest Results**
+    
+<u>**Client:**</u>
+**__ISP:__** {result['client']['isp']}
+**__Country:__** {result['client']['country']}
+  
+<u>**Server:**</u>
+**__Name:__** {result['server']['name']}
+**__Country:__** {result['server']['country']}, {result['server']['cc']}
+**__Sponsor:__** {result['server']['sponsor']}
+**__Latency:__** {result['server']['latency']}  
+**__Ping:__** {result['ping']}"""
+    msg = await app.send_photo(
+        chat_id=message.chat.id, 
+        photo=result["share"], 
+        caption=output
+    )
+    await m.delete()
