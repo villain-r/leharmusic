@@ -1,5 +1,5 @@
 aiofiles
-aiohttp
+aiohttp==3.7.4
 apscheduler
 asyncio
 beautifulsoup4
@@ -9,14 +9,14 @@ gitpython
 hachoir
 heroku3
 motor
-pillow==9.5.0
+pillow
 psutil
 httpx==0.27.2
-py-tgcalls==0.9.7
+py-tgcalls==0.9.1
 pykeyboard
 pyrofork
 python-dotenv
-pyyaml
+PyYAML>=5.3.1
 requests
 speedtest-cli
 spotipy
