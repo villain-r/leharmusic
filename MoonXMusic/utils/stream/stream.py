@@ -5,15 +5,15 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from MoonXMusic import Carbon, YouTube, app
-from MoonXMusic.core.call import Moony
-from MoonXMusic.misc import db
-from MoonXMusic.utils.database import add_active_video_chat, is_active_chat
-from MoonXMusic.utils.exceptions import AssistantErr
-from MoonXMusic.utils.inline import aq_markup, close_markup, stream_markup
-from MoonXMusic.utils.pastebin import MoonyBin
-from MoonXMusic.utils.stream.queue import put_queue, put_queue_index
-from MoonXMusic.utils.thumbnails import get_thumb
+from vexaaXMusic import Carbon, YouTube, app
+from vexaaXMusic.core.call import Moony
+from vexaaXMusic.misc import db
+from vexaaXMusic.utils.database import add_active_video_chat, is_active_chat
+from vexaaXMusic.utils.exceptions import AssistantErr
+from vexaaXMusic.utils.inline import aq_markup, close_markup, stream_markup
+from vexaaXMusic.utils.pastebin import MoonyBin
+from vexaaXMusic.utils.stream.queue import put_queue, put_queue_index
+from vexaaXMusic.utils.thumbnails import get_thumb
 
 
 async def stream(
