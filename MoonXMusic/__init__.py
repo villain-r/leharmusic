@@ -1,7 +1,7 @@
-from MoonXMusic.core.bot import Moony
-from MoonXMusic.core.dir import dirr
-from MoonXMusic.core.userbot import Userbot
-from MoonXMusic.misc import dbb, heroku
+from vexaaXMusic.core.bot import Moony
+from vexaaXMusic.core.dir import dirr
+from vexaaXMusic.core.userbot import Userbot
+from vexaaXMusic.misc import dbb, heroku
 
 from .logging import LOGGER
 
