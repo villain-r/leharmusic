@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from MoonXMusic.core.mongo import mongodb
+from vexaaXMusic.core.mongo import mongodb
 
 from .logging import LOGGER
 
