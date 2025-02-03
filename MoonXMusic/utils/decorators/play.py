@@ -9,9 +9,9 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from MoonXMusic import YouTube, app
-from MoonXMusic.misc import SUDOERS
-from MoonXMusic.utils.database import (
+from vexaaXMusic import YouTube, app
+from vexaaXMusic.misc import SUDOERS
+from vexaaXMusic.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -20,7 +20,7 @@ from MoonXMusic.utils.database import (
     is_active_chat,
     is_maintenance,
 )
-from MoonXMusic.utils.inline import botplaylist_markup
+from vexaaXMusic.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist
 from strings import get_string
 
