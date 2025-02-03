@@ -1,8 +1,8 @@
 import asyncio
 from typing import Union
 
-from MoonXMusic.misc import db
-from MoonXMusic.utils.formatters import check_duration, seconds_to_min
+from vexaaXMusic.misc import db
+from vexaaXMusic.utils.formatters import check_duration, seconds_to_min
 from config import autoclean, time_to_seconds
 
 
