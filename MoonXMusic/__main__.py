@@ -5,10 +5,10 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from MoonXMusic import LOGGER, app, userbot
-from MoonXMusic.core.call import Moony
-from MoonXMusic.misc import sudo
-from MoonXMusic.plugins import ALL_MODULES
+from vexaaXMusic import LOGGER, app, userbot
+from vexaaXMusic.core.call import Moony
+from vexaaXMusic.misc import sudo
+from vexaaXMusic.plugins import ALL_MODULES
 from MoonXMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
@@ -35,8 +35,8 @@ async def init():
         pass
     await app.start()
     for all_module in ALL_MODULES:
-        importlib.import_module("MoonXMusic.plugins" + all_module)
-    LOGGER("MoonXMusic.plugins").info("Successfully Imported Modules...")
+        importlib.import_module("vexaaXMusic.plugins" + all_module)
+    LOGGER("vexaaXMusic.plugins").info("Successfully Imported Modules...")
     await userbot.start()
     await Moony.start()
     try:
@@ -49,13 +49,13 @@ async def init():
     except:
         pass
     await Moony.decorators()
-    LOGGER("MoonXMusic").info(
-        "MoonXMusic started"
+    LOGGER("vexaaXMusic").info(
+        "vexaaXMusic started"
     )
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("MoonXMusic").info("Stopping MoonX Music Bot...")
+    LOGGER("vexaaXMusic").info("Stopping vexaaX Music Bot...")
 
 
 if __name__ == "__main__":
